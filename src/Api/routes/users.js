@@ -32,4 +32,15 @@ router.delete("/:id", (req, res) => {
   res.send(newUser);
 });
 
+router.patch("/:id", (req, res) => {
+  const { id } = req.params;
+  const { name, age } = req.body;
+
+  const user = users.find((user) => user._id === id);
+  if (name) user.name = name;
+  if (age) user.age = age;
+
+  res.send(user);
+});
+
 export default router;
