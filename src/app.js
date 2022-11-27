@@ -11,5 +11,5 @@ app.get("/", (req, res) => {
 app.use("/users", usersRoutes);
 
 app.listen(port, () =>
-  console.log(`server is running on http://localhost:${port} `)
+  console.log(`server is running on http://localhost:${port}/ `)
 );
