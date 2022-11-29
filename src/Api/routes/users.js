@@ -9,7 +9,6 @@ import {
 } from "../controllers/users.js";
 
 // *CRUD OPERATION
-
 router.post("/", createUser);
 router.get("/", getAllUser);
 router.get("/:id", getUser);
