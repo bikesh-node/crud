@@ -7,7 +7,7 @@ export class Users {
   }
 
   save() {
-    db.execute('INSERT INTO users (name,age) VALUES(?,?)', [
+    return db.execute('INSERT INTO users (name,age) VALUES(?,?)', [
       this.name,
       this.age,
     ]);
