@@ -27,16 +27,10 @@ export class Users {
 
   static updateUser(name, age, id) {
     const data = [name, age, id];
-    return db.execute(
-      'UPDATE users SET name=?,age=? WHERE id=?',
-      [name, age, id]
-      //   (err, result) => {
-      //     if (err) {
-      //       return res.send(err);
-      //     } else {
-      //       return res.send(result);
-      //     }
-      //   }
-    );
+    return db.execute('UPDATE users SET name=?,age=? WHERE id=?', [
+      name,
+      age,
+      id,
+    ]);
   }
 }

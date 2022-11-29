@@ -57,6 +57,5 @@ export const updateUser = (req, res) => {
     })
     .catch((err) => {
       res.send('error');
-      console.log(err);
     });
 };
